@@ -28,43 +28,43 @@
         }
         .text {
             margin-top: 20px;
-            font-size: 200%; /* Double the size of the text */
-            font-weight: bold; /* Make font thicker */
-            color: #000;
-        }
-        .text-shadow {
-            text-shadow:
-                -2px -2px 0 #fff,
-                2px -2px 0 #fff,
-                -2px 2px 0 #fff,
-                2px 2px 0 #fff, /* Thicker white outline */
-                -3px 0 0 #fff,
-                3px 0 0 #fff,
-                0 -3px 0 #fff,
-                0 3px 0 #fff,
-                2px 2px 5px rgba(0, 0, 0, 0.8), /* Soft shadow around the text */
-                2px 2px 10px rgba(0, 0, 0, 0.6); /* Larger blurred shadow */
+            font-size: 200%;
+            font-weight: bold;
         }
         .rainbow-text {
-            /* This class is used to apply the text shadow uniformly across the whole string */
+            font-size: 1.5em;
         }
     </style>
 </head>
 <body>
     <div class="centered-content">
         <img src="hideri.gif" alt="Centered GIF" class="center-gif">
-        <div class="text text-shadow">
+        <div class="text">
             nothing here yet &gt;.&lt;<br>
             under development!!!<br>
-            discord: <span class="rainbow-text">
-                <span style="color: #E40303;">h</span>
-                <span style="color: #FF8C00;">r</span>
-                <span style="color: #FFED00;">t</span>
-                <span style="color: #008026;">.</span>
-                <span style="color: #008026;">l</span>
-                <span style="color: #004CFF;">s</span>
-                <span style="color: #732982;">s</span>
-            </span>
+            discord: 
+            <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="rainbow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#E40303;"/>
+                        <stop offset="16.66%" style="stop-color:#FF8C00;"/>
+                        <stop offset="33.33%" style="stop-color:#FFED00;"/>
+                        <stop offset="50%" style="stop-color:#008026;"/>
+                        <stop offset="66.66%" style="stop-color:#004CFF;"/>
+                        <stop offset="83.33%" style="stop-color:#732982;"/>
+                        <stop offset="100%" style="stop-color:#E40303;"/>
+                    </linearGradient>
+                    <style>
+                        .rainbow {
+                            font: bold 40px 'Pangolin', cursive;
+                            fill: url(#rainbow-gradient);
+                            stroke: white;
+                            stroke-width: 3;
+                        }
+                    </style>
+                </defs>
+                <text x="0" y="40" class="rainbow">hrt.lss</text>
+            </svg>
         </div>
     </div>
 </body>
