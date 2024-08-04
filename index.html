@@ -43,14 +43,15 @@
                 2px 2px 5px rgba(0, 0, 0, 0.8), /* Soft shadow around the text */
                 2px 2px 10px rgba(0, 0, 0, 0.6); /* Larger blurred shadow */
         }
-        /* Rainbow color for each character */
+
+        /* Rainbow colors for "hrt.lss" */
         .rainbow span:nth-child(1) { color: #E40303; } /* h - Red */
         .rainbow span:nth-child(2) { color: #FF8C00; } /* r - Orange */
         .rainbow span:nth-child(3) { color: #FFED00; } /* t - Yellow */
         .rainbow span:nth-child(4) { color: #008026; } /* . - Green */
         .rainbow span:nth-child(5) { color: #004CFF; } /* l - Indigo */
         .rainbow span:nth-child(6) { color: #732982; } /* s - Violet */
-        .rainbow span:nth-child(7) { color: #E40303; } /* s - Red */
+        .rainbow span:nth-child(7) { color: #E40303; } /* s - Red (cycle restarts) */
     </style>
 </head>
 <body>
@@ -59,9 +60,9 @@
         <div class="text">
             nothing here yet &gt;.&lt;<br>
             under development!!!<br>
-            <span class="rainbow">
+            <div class="rainbow">
                 <span>h</span><span>r</span><span>t</span><span>.</span><span>l</span><span>s</span><span>s</span>
-            </span>
+            </div>
         </div>
     </div>
 </body>
