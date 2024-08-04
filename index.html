@@ -29,16 +29,18 @@
         .text {
             margin-top: 20px;
             font-size: 200%; /* Double the size of the text */
+            font-weight: bold; /* Make font thicker */
             color: #000;
             text-shadow:
-                -1px -1px 0 #fff,
-                1px -1px 0 #fff,
-                -1px 1px 0 #fff,
-                1px 1px 0 #fff, /* White text outline */
-                -2px 0 0 #fff,
-                2px 0 0 #fff,
-                0 -2px 0 #fff,
-                0 2px 0 #fff; /* Thicker outline by adding more shadows */
+                -2px -2px 0 #fff,
+                2px -2px 0 #fff,
+                -2px 2px 0 #fff,
+                2px 2px 0 #fff, /* Thicker white outline */
+                -3px 0 0 #fff,
+                3px 0 0 #fff,
+                0 -3px 0 #fff,
+                0 3px 0 #fff,
+                0 0 5px rgba(0, 0, 0, 0.8); /* Soft shadow around the text */
         }
     </style>
 </head>
