@@ -22,50 +22,53 @@
             height: 100%;
             text-align: center;
         }
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+        .image-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background-color: white;
+            border-radius: 50%;
+            z-index: -1;
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7),
+                        0 0 20px 10px rgba(255, 255, 255, 0.5);
+        }
         img.center-gif {
             max-width: 100%;
             max-height: 100%;
-            filter: url(#white-outline-effect); /* Apply the SVG filter */
+            position: relative;
+            z-index: 1;
         }
         .text {
             margin-top: 20px;
-            font-size: 200%; /* Double the size of the text */
-            font-weight: bold; /* Make font thicker */
+            font-size: 200%;
+            font-weight: bold;
             color: #000;
             text-shadow:
                 -2px -2px 0 #fff,
                 2px -2px 0 #fff,
                 -2px 2px 0 #fff,
-                2px 2px 0 #fff, /* Thicker white outline */
+                2px 2px 0 #fff,
                 -3px 0 0 #fff,
                 3px 0 0 #fff,
                 0 -3px 0 #fff,
                 0 3px 0 #fff,
-                2px 2px 5px rgba(0, 0, 0, 0.8), /* Soft shadow around the text */
-                2px 2px 10px rgba(0, 0, 0, 0.6); /* Larger blurred shadow */
+                2px 2px 5px rgba(0, 0, 0, 0.8),
+                2px 2px 10px rgba(0, 0, 0, 0.6);
         }
     </style>
 </head>
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="height:0px;width:0px;position:absolute;z-index:-1;visibility:hidden;">
-        <defs>
-            <filter id="white-outline-effect" filterUnits="objectBoundingBox" x="-10%" y="-10%" width="120%" height="120%">
-                <feMorphology operator="dilate" radius="2" in="SourceAlpha" result="outline"></feMorphology>
-                <feGaussianBlur in="outline" stdDeviation="2" result="blurred"></feGaussianBlur>
-                <feFlood flood-color="white" result="color"></feFlood>
-                <feComposite in="color" in2="blurred" operator="in" result="outlineFill"></feComposite>
-                <feMerge>
-                    <feMergeNode in="outlineFill"></feMergeNode>
-                    <feMergeNode in="SourceGraphic"></feMergeNode>
-                </feMerge>
-                <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="shadow"></feGaussianBlur>
-                <feOffset in="shadow" dx="5" dy="5" result="offsetShadow"></feOffset>
-                <feComposite in="offsetShadow" in2="SourceGraphic" operator="over" result="shadowed"></feComposite>
-            </filter>
-        </defs>
-    </svg>
     <div class="centered-content">
-        <img src="hideri.gif" alt="Centered GIF" class="center-gif">
+        <div class="image-container">
+            <img src="hideri.gif" alt="Centered GIF" class="center-gif">
+        </div>
         <div class="text">
             nothing here yet &gt;.&lt;<br>
             under development!!!<br>
