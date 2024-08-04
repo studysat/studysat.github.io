@@ -12,9 +12,34 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            background: linear-gradient(270deg, #E70000, #FF8C00, #FFEF00, #00811F, #0044FF, #760089);
+            background-size: 1200% 1200%;
+
+            -webkit-animation: RainbowBackground 30s ease infinite;
+            -moz-animation: RainbowBackground 30s ease infinite;
+            animation: RainbowBackground 30s ease infinite;
         }
+
+        @-webkit-keyframes RainbowBackground {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+        @-moz-keyframes RainbowBackground {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+        @keyframes RainbowBackground {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+
         h1 {
             font-size: 4em;
+            color: white; /* Adjust text color if needed */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Soft shadow for better readability */
         }
     </style>
 </head>
