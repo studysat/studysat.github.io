@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered GIF on Background</title>
+    <title>Site Under Development</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
     <style>
         body, html {
             height: 100%;
@@ -11,24 +12,33 @@
             padding: 0;
             background: url('bg.png') no-repeat center center fixed;
             background-size: cover;
+            font-family: 'Pangolin', cursive;
         }
-        
         .centered-content {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100%;
+            text-align: center;
         }
-
         img.center-gif {
             max-width: 100%;
             max-height: 100%;
+        }
+        .text {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="centered-content">
         <img src="hideri.gif" alt="Centered GIF" class="center-gif">
+        <div class="text">
+            nothing here yet &gt;.&lt;<br>
+            under development!!!<br>
+            discord: hrt.lss
+        </div>
     </div>
 </body>
 </html>
