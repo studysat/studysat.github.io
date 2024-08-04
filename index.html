@@ -25,44 +25,27 @@
         img.center-gif {
             max-width: 100%;
             max-height: 100%;
+            filter: drop-shadow(2px 2px 2px #000) /* Horizontal, vertical, blur, color */
+                    drop-shadow(-2px -2px 2px #000) /* Horizontal, vertical, blur, color */
+                    drop-shadow(2px -2px 2px #000)
+                    drop-shadow(-2px 2px 2px #000);
         }
         .text {
             margin-top: 20px;
-            font-size: 200%; /* Double the size of the text */
-            font-weight: bold; /* Make font thicker */
+            font-size: 200%;
+            font-weight: bold;
             color: #000;
             text-shadow:
                 -2px -2px 0 #fff,
                 2px -2px 0 #fff,
                 -2px 2px 0 #fff,
-                2px 2px 0 #fff, /* Thicker white outline */
+                2px 2px 0 #fff,
                 -3px 0 0 #fff,
                 3px 0 0 #fff,
                 0 -3px 0 #fff,
                 0 3px 0 #fff,
-                2px 2px 5px rgba(0, 0, 0, 0.8), /* Soft shadow around the text */
-                2px 2px 10px rgba(0, 0, 0, 0.6); /* Larger blurred shadow */
-        }
-        .rainbow {
-            text-shadow: none;
-        }
-        .red {
-            color: #E40303;
-        }
-        .orange {
-            color: #FF8C00;
-        }
-        .yellow {
-            color: #FFED00;
-        }
-        .green {
-            color: #008026;
-        }
-        .indigo {
-            color: #004CFF;
-        }
-        .violet {
-            color: #732982;
+                2px 2px 5px rgba(0, 0, 0, 0.8),
+                2px 2px 10px rgba(0, 0, 0, 0.6);
         }
     </style>
 </head>
@@ -72,13 +55,7 @@
         <div class="text">
             nothing here yet &gt;.&lt;<br>
             under development!!!<br>
-            discord: 
-            <span class="rainbow red">h</span>
-            <span class="rainbow orange">r</span>
-            <span class="rainbow yellow">t</span>
-            <span class="rainbow green">.</span>
-            <span class="rainbow indigo">l</span>
-            <span class="rainbow violet">ss</span>
+            discord: hrt.lss
         </div>
     </div>
 </body>
